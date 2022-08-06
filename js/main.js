@@ -41,25 +41,25 @@ $(document).ready(function () {
 
     // validace formulářů
 
-
-    $('#brief-form').validate({
-        rules: {
-            username: "required",
-            email: {
-                required: true,
-                email: true
+    /*
+        $('#brief-form').validate({
+            rules: {
+                name: "required",
+                email: {
+                    required: true,
+                    email: true
+                },
+    
+                zprava: "required"
             },
-            phone: "required",
-            message: "required"
-        },
-        messages: {
-            username: "Uveďte Vaše jméno",
-            phone: "Uveďte Vaše telefonní číslo",
-            email: "Uveďte Váš email",
-            message: "Napište mi zprávu"
-        }
-    });
-
+            messages: {
+                name: "Uveďte Vaše jméno",
+                phone: "Uveďte Vaše telefonní číslo",
+                email: "Uveďte Váš email",
+                zprava: "Napište mi zprávu"
+            }
+        });
+    */
 
 
 

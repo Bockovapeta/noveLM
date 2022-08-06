@@ -4,13 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HouseFix</title>
+    <title> Schody Zlín | LM-wooden interier | LM-wooden, schody a interiér Zlín </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <meta name="seznam-wmt" content="fGTHs1RJsMMEI34zAMTudoKoOXnmUGaM" />
+
+    <meta name="description" content="LM-wooden interier Vám nabízí realizaci i renovaci schodišť. Schody, jaké neznáte. V nabídce najdete vinylové, laminátové, masivní schodiště, schody s osvětlením i se zábradlím. Lukáš Marušák" />
+    <meta name="google-site-verification" content="ENZvIMjGKCuatWTnROhv474wynTVTzzY2MI5nEoIV_A" />
+
+    <meta name="keywords" content="LM wooden interier, interier, LM schody, schodiště, Zlín, Lukáš Marušák, realizace, renovace">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="author" content="LM wooden interier">
+
 </head>
+
+
+
+
+
+
+
+
+
+
+
+
 
 <body>
 
@@ -265,7 +315,7 @@
                 <div class="brief-block">
                     <div data-wow-delay=".2s" class="interview brief__interview wow animate__animated animate__fadeInLeft">
                         <h3 class="interview__title">
-                            Můžu Vám sdělit přibližnou cenu práce a materiálu po telefonu </h3>
+                            Můžu Vám sdělit přibližnou cenu práce a materiálu </h3>
                         <span class="interview__subtitle"> K tomu musíte odpovědět následující otázky</span>
 
                         <ul class="interview-list">
@@ -300,12 +350,16 @@
 
                         <h3 class="form__title">Zanechte poptávku pro bezplatný výpočet nových schodišť nebo renovaci</h3>
                         <span class="form__subtitle">Vyplňte níže uvedený formulář</span>
-                        <form action="#" class="form" id="brief-form">
-                            <input type="text" name="username" class="input brief__input" placeholder="Vaše jméno">
-                            <input type="text" name="phone" class="input brief__input" placeholder="Váš telefon">
-                            <input type="email" name="email" class="input brief__input" placeholder="Váš email">
-                            <input type="email" name="message" class="input brief__input" placeholder="Zpráva">
-                            <button class="button brief__button">Odeslat </button>
+                        <form onsubmit="sendEmail(); reset(); return false;" class="form" id="brief-form">
+                            <input type="text" name="name" id="name" class="input brief__input" placeholder="Vaše jméno">
+
+                            <input type="email" name="email" id="email" class="input brief__input" placeholder="Váš email">
+
+                            <input type="text" name="phone" id="phone" class="input brief__input" placeholder="Vaše telefonní číslo">
+
+
+                            <textarea type="text" name="zprava" id="zprava" class="input brief__input" placeholder="Zpráva" rows="4"> Vaše zpráva</textarea>
+                            <button type="submit" class="button brief__button"> Odeslat </button>
                             <span class="form__description">Ozvu se Vám nazpět</span>
                         </form>
                     </div>
@@ -374,8 +428,34 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                SecureToken: "5b47e4c6-fb5a-484d-b4d2-fb4eb2f51030",
+
+                To: 'info@lm-wooden.cz',
+                From: "info@lm-wooden.cz",
+                Subject: "Nová zpráva z kontaktního formuláře stránek lm-wooden.cz",
+                Body: "Jméno: " + document.getElementById("name").value
+                    + "<br> Email: " + document.getElementById("email").value
+                    + "<br> Telefoní číslo: " + document.getElementById("phone").value
+                    + "<br> Zpráva: " + document.getElementById("zprava").value
+            }).then(
+                message => alert("zpráva byla úspěšně odeslaná")
+            );
+        }
+    </script>
+
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/main.js"></script>
+
+
+
 
 </body>
 

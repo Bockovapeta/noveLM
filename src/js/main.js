@@ -49,12 +49,14 @@ $(document).ready(function () {
                 required: true,
                 email: true
             },
-            phone: "required"
+            phone: "required",
+            message: "required"
         },
         messages: {
-            username: "Uveďte vaše jméno",
-            phone: "Uveďte vaše telefonní číslo",
-            email: "Potřebujeme váš email"
+            username: "Uveďte Vaše jméno",
+            phone: "Uveďte Vaše telefonní číslo",
+            email: "Uveďte Váš email",
+            message: "Napište mi zprávu"
         }
     });
 
@@ -70,14 +72,14 @@ $(document).ready(function () {
         //odebrání zobrazených obrázků pro užší prostředí např. tablety a pro mobily
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1300,
                 settings: {
                     slidesToShow: 2,
 
                 }
             },
             {
-                breakpoint: 760,
+                breakpoint: 850,
                 settings: {
                     slidesToShow: 1,
 

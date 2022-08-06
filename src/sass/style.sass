@@ -149,7 +149,8 @@ body
             line-height: 24px
             font-size: 14px
             color: $accent
-            max-width: 300px
+            max-width: 300p
+            padding-left: 30px
             @media (max-width: 768px)
                 font-size: 12px
                 max-width: 200px
@@ -159,9 +160,9 @@ body
             align-items: center
             margin-bottom: 20px
             @media (max-width: 768px)
-                margin-left: 60px
+                margin-left: 50px
             @media (max-width: 1200px)
-                margin-left: 100px
+                margin-left: 70px
             &:last-child
                 margin-bottom: 0
             @media (max-width: 768px)
@@ -274,7 +275,7 @@ body
         display: flex
         justify-content: center
         margin: auto
-        margin-top: 30px
+        margin-top: 40px
 
 .arrows__left, .arrows__right
     cursor: pointer
@@ -629,12 +630,18 @@ body
         flex-direction: column-reverse
 
 .map
-    width: 50%
+    width: 100%
     position: absolute
     left: 0
     top: 0
+    @media (min-width: 901px)
+        max-height: 100%
+        opacity: 0.6
     &__image
         width: 100%
+        @media (min-width: 901px)
+            width: 50%
+
     @media (max-width: 900px)
         width: 100%
         position: relative
@@ -643,11 +650,13 @@ body
     flex-basis: 50%
     padding-top: 100px
     padding-left: 200px
-    @media (max-width: 900px)
-        padding-left: 10px
-        flex-basis: 100%
     @media (max-width: 1200px)
         padding-left: 100px
+    @media (max-width: 900px)
+        padding-left: 20px
+        flex-basis: 50%
+        margin: auto
+
     &__title
         +bold
         font-size: 24px

@@ -131,6 +131,7 @@ body {
   .main-text {
     margin-bottom: 30px;
     text-align: center;
+    margin: auto;
   }
 }
 .main-text__title {
@@ -182,8 +183,8 @@ body {
 }
 @media (max-width: 1200px) {
   .main-image__image {
-    max-width: 100%;
-    margin: 20px 0;
+    width: 100%;
+    margin: 40px 0;
   }
 }
 .main-list {
@@ -228,7 +229,7 @@ body {
 }
 @media (max-width: 1200px) {
   .main-list__item {
-    margin-left: 70px;
+    margin-left: 20px;
   }
 }
 .main-list__item:last-child {

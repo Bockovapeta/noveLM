@@ -1,0 +1,967 @@
+@font-face {
+  font-family: "Museo Sans Light";
+  src: url("../fonts/MuseoSansCyrl-300.eot");
+  src: url("../fonts/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Museo Sans Bold";
+  src: url("../fonts/MuseoSansCyrl-700.eot");
+  src: url("../fonts/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Museo Sans Light", sans serif;
+  font-weight: 300;
+}
+
+.container {
+  max-width: 1200px;
+  width: 96%;
+  margin: auto;
+}
+@media (max-width: 640px) {
+  .container {
+    width: 90%;
+  }
+}
+
+.button {
+  background-color: #4eff3e;
+  color: #333;
+  border: none;
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 18px 47px;
+  border-radius: 10px;
+}
+.button:hover {
+  background-color: #10be00;
+}
+
+.input {
+  border: 1px solid #dddddd;
+  padding: 20px 25px;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.section-title {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.section-subtitle {
+  color: #000;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+}
+
+.header {
+  padding: 20px 0px;
+}
+.header-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__info {
+  display: flex;
+  text-align: right;
+}
+.header__contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 640px) {
+  .header__contacts {
+    display: none;
+  }
+}
+.header__address {
+  color: #333;
+  font-size: 13px;
+  font-weight: 400;
+}
+.header__phone {
+  color: #333;
+  font-weight: 400;
+  font-style: 20px;
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+}
+.header__button {
+  padding: 18px 47px;
+  border-radius: 10px;
+  margin-left: 30px;
+  font-size: 13px;
+}
+
+.main {
+  background-color: #f5f5f5;
+}
+.main-block {
+  display: flex;
+  padding: 30px 0 30px 0;
+}
+@media (max-width: 1200px) {
+  .main-block {
+    flex-direction: column;
+  }
+}
+.main-text {
+  flex-basis: 50%;
+}
+@media (max-width: 1200px) {
+  .main-text {
+    margin-bottom: 30px;
+    text-align: center;
+    margin: auto;
+  }
+}
+.main-text__title {
+  font-size: 41px;
+  color: #333;
+  padding-right: 200px;
+  line-height: 55px;
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+  margin: 45px 0px 20px 0px;
+}
+@media (max-width: 1200px) {
+  .main-text__title {
+    padding-right: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .main-text__title {
+    text-align: center;
+    line-height: 1.4;
+  }
+}
+.main-text__subtitle {
+  font-size: 20px;
+  color: #333;
+  line-height: 65px;
+}
+@media (max-width: 768px) {
+  .main-text__subtitle {
+    line-height: 1.4;
+  }
+}
+.main-image {
+  padding: 0px 20px;
+  margin-right: -55px;
+  flex-basis: 70%;
+}
+@media (max-width: 1200px) {
+  .main-image {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+}
+.main-image__image {
+  opacity: 0.8;
+  max-width: 100%;
+  margin: 60px 0 0 120px;
+}
+@media (max-width: 1200px) {
+  .main-image__image {
+    width: 100%;
+    margin: 40px 0;
+  }
+}
+.main-list {
+  margin: 40px 0 0 0;
+  padding: 50px 0 0 0;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .main-list {
+    margin: 20px auto;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 1200px) {
+  .main-list {
+    padding-top: 30px;
+  }
+}
+.main-list__text {
+  line-height: 24px;
+  font-size: 16px;
+  color: #333;
+  max-width: 300p;
+  padding-left: 30px;
+}
+@media (max-width: 768px) {
+  .main-list__text {
+    font-size: 12px;
+    max-width: 200px;
+    padding-left: 30px;
+  }
+}
+.main-list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+  .main-list__item {
+    margin-left: 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .main-list__item {
+    margin-left: 20px;
+  }
+}
+.main-list__item:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .main-list__item {
+    margin-bottom: 15px;
+  }
+}
+.main-list__image {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  padding-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.offer {
+  padding: 90px 0;
+  background: url("../img/20210723_122940.jpg") no-repeat;
+  background-position: center right;
+  background-size: contain;
+  position: relative;
+  background-opacity: 0.5;
+}
+@media (max-width: 1200px) {
+  .offer {
+    background-size: cover;
+    background-position: center left;
+  }
+}
+@media (max-width: 768px) {
+  .offer {
+    background: #fff;
+    text-align: center;
+    padding: 60px 0 40px 0;
+  }
+}
+.offer:before {
+  content: "";
+  top: 0;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  background-color: #fff;
+  position: absolute;
+}
+.offer-block {
+  padding-right: 90px;
+  position: relative;
+  margin-left: 0;
+}
+@media (max-width: 768px) {
+  .offer-block {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+.offer-title {
+  font-size: 24px;
+  line-height: 35px;
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+  max-width: 350px;
+  margin-bottom: 25px;
+}
+@media (max-width: 768px) {
+  .offer-title {
+    margin: auto;
+    padding-bottom: 30px;
+  }
+}
+.offer-subtitle {
+  display: block;
+  font-size: 16px;
+  max-width: 300px;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+@media (max-width: 768px) {
+  .offer-subtitle {
+    margin: auto;
+    padding-bottom: 10px;
+  }
+}
+.offer__text {
+  line-height: 1.7;
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+}
+@media (min-width: 1200px) {
+  .offer__text {
+    width: 300px;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  display: none;
+}
+.modal_active {
+  display: flex;
+}
+.modal-dialog {
+  margin: auto;
+  max-width: 450px;
+  width: 90%;
+  min-height: 200px;
+  background-color: #fff;
+  padding: 40px;
+  position: relative;
+}
+.modal-dialog__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.portfolio {
+  padding: 100px 0;
+  background: #f5f5f5 url("../img/portfolio-bg.png") left repeat-y;
+  background-size: 50%;
+}
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 50px 0;
+  }
+}
+.portfolio__title {
+  margin-bottom: 100px;
+  color: #333;
+}
+.portfolio__arrows {
+  max-width: 120px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.arrows__left, .arrows__right {
+  cursor: pointer;
+}
+
+.arrows__left img {
+  margin-right: 30px;
+}
+
+.slider__item img {
+  width: 390px;
+  height: 600px;
+  margin: auto;
+}
+
+.price {
+  padding: 100px;
+}
+@media (max-width: 768px) {
+  .price {
+    padding: 60px;
+  }
+}
+.price__title {
+  margin-bottom: 60px;
+}
+.price__subtitle {
+  margin-bottom: 60px;
+}
+.price__card {
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 900px) {
+  .cards {
+    justify-content: center;
+  }
+}
+@media (max-width: 1400px) {
+  .cards {
+    justify-content: space-around;
+  }
+}
+
+.card {
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  transition: 0.2s;
+}
+.card:hover {
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+.card:hover .card__image::before {
+  opacity: 1;
+}
+.card__text {
+  padding: 40px;
+}
+.card__title {
+  margin-top: 0;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 30px;
+}
+.card__image {
+  position: relative;
+}
+.card__image::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(to top, #2fff00 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  transition: 0.2s;
+}
+.card__image img {
+  display: block;
+  width: 380px;
+  height: 280px;
+}
+.card__link {
+  display: inline-block;
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  position: relative;
+}
+.card__link:hover::after {
+  height: 13px;
+}
+.card__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #a8f74e;
+  z-index: -1;
+  transition: 0.2s;
+}
+
+.href {
+  text-decoration: none;
+  color: black;
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+}
+.href:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.steps {
+  padding: 40px 0 80px 0;
+}
+.steps__title {
+  margin-bottom: 60px;
+}
+.steps__subtitle {
+  margin-bottom: 75px;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 900px) {
+  .icons {
+    display: block;
+  }
+}
+
+.icon {
+  text-align: center;
+  position: relative;
+}
+.icon__image {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-bottom: 2px solid black;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-bottom: 10px;
+}
+@media (max-width: 768px) {
+  .icon__image {
+    margin-bottom: 20px;
+  }
+}
+.icon__image img {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.icon__text {
+  display: inline-block;
+  max-width: 140px;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+  margin-right: 20px;
+}
+@media (max-width: 768px) {
+  .icon__text {
+    max-width: 200px;
+    margin-right: 20px;
+  }
+}
+.icon__textmini {
+  display: inline-block;
+  max-width: 240px;
+  font-size: 14px;
+  line-height: 20px;
+  padding-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .icon__textmini {
+    max-width: 200px;
+    margin-bottom: 20px;
+  }
+}
+
+.notice {
+  background-color: #79ff2b;
+  padding: 100px 0;
+}
+.notice__text {
+  max-width: 750px;
+  text-align: center;
+  font-size: 32px;
+  margin: auto;
+  line-height: 50px;
+  font-weight: 300;
+}
+@media (max-width: 900px) {
+  .notice__text {
+    font-size: 25px;
+    line-height: 25px;
+  }
+}
+
+.info {
+  padding: 100px;
+}
+.info__block {
+  margin-bottom: 150px;
+}
+@media (max-width: 1400px) {
+  .info__block {
+    margin-bottom: 20px;
+  }
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .benefits {
+    display: inline-flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 1400px) {
+  .benefits {
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+
+.benefit {
+  background-color: #f7f7f7;
+  height: 410px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 370px;
+  position: relative;
+}
+@media (max-width: 1400px) {
+  .benefit {
+    margin-bottom: 30px;
+  }
+}
+.benefit__image {
+  position: absolute;
+  width: 370px;
+  height: 410px;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+@media (max-width: 900px) {
+  .benefit__image {
+    width: 100%;
+    height: 100%;
+  }
+}
+.benefit__text {
+  margin: 26px 100px 0 26px;
+  font-size: 16px;
+  line-height: 23px;
+  z-index: 1;
+}
+.benefit__text strong {
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+}
+
+.documents__title {
+  margin-bottom: 100px;
+}
+
+.documents-block {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .documents-block {
+    display: block;
+  }
+}
+.documents-block__item {
+  margin-bottom: 30px;
+}
+.documents-block__text {
+  text-align: center;
+  margin-top: 40px;
+  line-height: 24px;
+  font-size: 18px;
+}
+@media (max-width: 1200px) {
+  .documents-block__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+}
+.documents-block__image img {
+  height: 400px;
+  width: 300px;
+}
+
+.brief {
+  background-image: url("../img/brief-color-bg.jpg"), url("../img/brief-bg.jpg");
+  background-position: left center, center right;
+  background-size: 50% 100%, cover;
+  background-repeat: no-repeat, no-repeat;
+  padding: 100px 0;
+}
+@media (max-width: 768px) {
+  .brief {
+    background-image: url("../img/brief-color-bg.jpg"), url("../img/brief-bg.jpg");
+    background-position: top center, center bottom;
+    background-size: 100% 50%, cover;
+    background-repeat: repeat-x, no-repeat;
+    padding: 50px 0;
+  }
+}
+.brief-block {
+  display: flex;
+}
+@media (max-width: 768px) {
+  .brief-block {
+    flex-direction: column;
+  }
+}
+.brief__interview {
+  flex-basis: 50%;
+}
+.brief__form {
+  flex-basis: 50%;
+  padding-left: 200px;
+  text-align: center;
+}
+@media (max-width: 1200px) {
+  .brief__form {
+    padding-left: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .brief__form {
+    padding-left: 0;
+  }
+}
+.brief__input {
+  width: 100%;
+  max-width: 370px;
+  margin-bottom: 15px;
+}
+.brief__button {
+  width: 100%;
+  max-width: 370px;
+  display: block;
+  height: 70px;
+  margin: 15px auto 30px auto;
+}
+
+.interview {
+  padding-right: 70px;
+}
+@media (max-width: 1200px) {
+  .interview {
+    padding-left: 30px;
+    padding-right: 0;
+  }
+}
+.interview__title {
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1200px) {
+  .interview__title {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
+.interview__subtitle {
+  font-size: 16px;
+  margin-bottom: 100px;
+  display: block;
+}
+@media (max-width: 1200px) {
+  .interview__subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+}
+.interview-list {
+  list-style-type: none;
+  padding: 0;
+}
+.interview-list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+}
+.interview-list__counter {
+  height: 35px;
+  width: 35px;
+  border: 2px solid #000;
+  display: inline-block;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 50px;
+  margin-right: 30px;
+  font-size: 14px;
+}
+@media (max-width: 1200px) {
+  .interview-list__counter {
+    margin-right: 20px;
+  }
+}
+.interview-list__text {
+  max-width: 400px;
+  font-size: 18px;
+}
+@media (max-width: 1200px) {
+  .interview-list__text {
+    font-size: 14px;
+    max-width: 300px;
+    text-align: left;
+  }
+}
+
+.form__title {
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1200px) {
+  .form__title {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .form__title {
+    padding-top: 90px;
+    margin-top: 150px;
+  }
+}
+.form__subtitle {
+  font-size: 16px;
+  margin-bottom: 50px;
+  display: block;
+}
+@media (max-width: 1200px) {
+  .form__subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+}
+.form__description {
+  font-size: 15px;
+}
+
+.error {
+  border: 2px solid red;
+  background: rgba(255, 142, 142, 0.7137254902);
+}
+
+.footer {
+  position: relative;
+}
+@media (max-width: 1500px) {
+  .footer {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.map {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media (min-width: 1501px) {
+  .map {
+    max-height: 100%;
+    opacity: 0.6;
+  }
+}
+.map__image {
+  width: 100%;
+}
+@media (min-width: 1501px) {
+  .map__image {
+    width: 50%;
+  }
+}
+@media (max-width: 1500px) {
+  .map {
+    width: 100%;
+    position: relative;
+  }
+}
+
+.contacts {
+  flex-basis: 50%;
+  padding-top: 100px;
+  padding-left: 200px;
+}
+@media (max-width: 1200px) {
+  .contacts {
+    padding-left: 100px;
+  }
+}
+@media (max-width: 900px) {
+  .contacts {
+    padding-left: 20px;
+    flex-basis: 50%;
+    margin: auto;
+  }
+}
+.contacts__title {
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 100px;
+}
+.contacts-block {
+  display: flex;
+  justify-content: flex-end;
+}
+.contacts-list {
+  padding: 0;
+  list-style-type: none;
+}
+.contacts-list__item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.contacts-list__item strong {
+  font-family: "Museo Sans Bold", sans serif;
+  font-weight: 700;
+}
+.contacts-list__icon {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  margin-right: 20px;
+  padding-right: 60px;
+}
+.contacts-list__text {
+  line-height: 1.4;
+  text-decoration: none;
+  color: #000;
+}
+.contacts-list__text a {
+  color: #000;
+  text-decoration: none;
+}
+.contacts-list__text a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=style.css.map */

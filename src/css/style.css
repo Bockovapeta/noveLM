@@ -761,7 +761,8 @@ body {
 }
 @media (max-width: 1200px) {
   .interview {
-    padding-right: 30px;
+    padding-left: 30px;
+    padding-right: 0;
   }
 }
 .interview__title {
@@ -823,6 +824,7 @@ body {
   .interview-list__text {
     font-size: 14px;
     max-width: 300px;
+    text-align: left;
   }
 }
 
